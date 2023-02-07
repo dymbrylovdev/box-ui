@@ -1,0 +1,7 @@
+#ide configuration
+.fleet
+.idea
+
+#cаtalogs
+/build
+node_modules

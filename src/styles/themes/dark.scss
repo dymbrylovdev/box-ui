@@ -1,0 +1,6 @@
+@import "../variables/global";
+
+.app.dark {
+  background-color: #{$accent};
+  color: #{$primary}
+}

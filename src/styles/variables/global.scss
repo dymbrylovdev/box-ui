@@ -1,0 +1,18 @@
+$accent: #090949;
+$lite: #a8a8f5;
+$primary: #049604;
+$secondary: #04ff04;
+
+
+:root{
+  --font-family-main: Consolas, Serif;
+
+  --font-size-m: 12px;
+  --font-line-m: 24px;
+  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
+  --font-size-l: 24px;
+  --font-line-l: 32px;
+  --font-m: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+}
