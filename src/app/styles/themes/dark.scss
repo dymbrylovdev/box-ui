@@ -1,0 +1,12 @@
+@import "../variables/global";
+
+.app.dark {
+  --bg-color: #{$dark};
+  --revert-bg-color: #{$lite};
+
+  --primary-color: #{$primary};
+  --secondary-color: #{$secondary};
+
+  --revert-primary-color: #{$primary-dark};
+  --revert-secondary-color: #{$secondary-dark};
+}

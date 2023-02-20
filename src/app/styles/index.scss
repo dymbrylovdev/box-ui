@@ -1,0 +1,20 @@
+@import "./reset";
+@import "variables/global";
+@import "./themes/dark";
+@import "./themes/light";
+
+.app {
+  font: var(--font-m);
+  height: 100vh;
+
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+
+.container-content {
+  display: flex;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+}

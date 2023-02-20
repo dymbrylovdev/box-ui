@@ -21,7 +21,7 @@ export const buildWebpackConfig = (options: BuildOptions) : webpack.Configuratio
     module: {
       rules: buildLoaders(options),
     },
-    resolve: buildResolves(),
+    resolve: buildResolves(options),
     optimization: {
       runtimeChunk: 'single',
     },

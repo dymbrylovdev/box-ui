@@ -1,17 +1,17 @@
-import {createRoot} from "react-dom/client";
-import {BrowserRouter} from "react-router-dom";
-import {lazy} from "react";
-import "./styles/index.scss"
-import ThemeProvider from "./components/ThemeProvider";
+import {createRoot} from 'react-dom/client';
+import {BrowserRouter} from 'react-router-dom';
+import {lazy} from 'react';
+import {ThemeProvider} from 'features/theme';
+import './shared/config/i18n/i18n';
 
-const App = lazy(() => import('./app'));
+const App = lazy(async () => import('./app'));
 
-const root = createRoot(document.getElementById("root"))
+const root = createRoot(document.getElementById('root'));
 
 root.render(
-  <ThemeProvider>
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
-  </ThemeProvider>
-)
+	<BrowserRouter>
+		<ThemeProvider>
+			<App/>
+		</ThemeProvider>
+	</BrowserRouter>,
+);
