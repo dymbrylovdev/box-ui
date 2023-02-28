@@ -1,6 +1,5 @@
-import React, { type FC } from 'react'
-import { ClassNames } from "shared/lib/halpers/classNames"
-import cls from './Button.module.scss'
+import { type FC } from 'react';
+import { ClassNames } from 'shared/lib/halpers/classNames';
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: any
@@ -9,13 +8,12 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: FC<IProps> = ({
   className,
   children,
-  onClick
-}) => {
-  return (
-    <button
-      onClick={onClick}
-      className={ClassNames(cls.button, {}, [className])}>
-      {children}
-    </button>
-  )
-}
+  onClick,
+}) => (
+  <button
+    onClick={onClick}
+    className={ClassNames('', {}, [className])}
+  >
+    {children}
+  </button>
+);

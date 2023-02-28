@@ -1,6 +1,6 @@
-import React, {FC} from 'react';
-import {ClassNames} from "shared/lib/halpers/classNames";
-import {Link, LinkProps} from "react-router-dom";
+import React, { FC } from 'react';
+import { ClassNames } from 'shared/lib/halpers/classNames';
+import { Link, LinkProps } from 'react-router-dom';
 import cls from './AppLink.module.scss';
 
 export enum AppLinkTheme {
@@ -22,14 +22,11 @@ export const AppLink: FC<IProps> = (props) => {
   } = props;
 
   return (
-    <>
-      <Link
-        to={to}
-        className={ClassNames(cls.appLink,{},[className, cls[theme]])}>
-        {children}
-      </Link>
-    </>
-
+    <Link
+      to={to}
+      className={ClassNames(cls.appLink, {}, [className, cls[theme]])}
+    >
+      {children}
+    </Link>
   );
 };
-

@@ -1,4 +1,7 @@
 {
   "TEST": "test",
-  "LANG": "Lang"
+  "LANG": "Lang",
+  "TOGGLE": "Toggle",
+  "MAIN": "main",
+  "CARD": "card"
 }

@@ -4,9 +4,8 @@
 @import "./themes/light";
 
 .app {
-  font: var(--font-m);
+  font: var(--font-l);
   height: 100vh;
-
   background-color: var(--bg-color);
   color: var(--primary-color);
 }

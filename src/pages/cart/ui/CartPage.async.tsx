@@ -1,6 +1,6 @@
-import {lazy} from "react";
+import { lazy } from 'react';
 
-export const CartPageAsync = lazy(() => new Promise(resolve => {
+export const CartPageAsync = lazy(() => new Promise((resolve) => {
   // @ts-ignore
-  setTimeout(() => resolve(import('./CartPage')), 1111)
+  setTimeout(() => resolve(import('./CartPage')), 1111);
 }));
