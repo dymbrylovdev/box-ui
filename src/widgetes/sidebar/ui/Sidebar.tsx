@@ -1,9 +1,9 @@
 import { FC, useState } from 'react';
-import { ClassNames } from 'shared/lib/halpers/classNames';
+import { useTranslation } from 'react-i18next';
+import { ClassNames } from 'shared/lib';
 import { ThemeButton } from 'features/theme';
 import { Button } from 'shared/ui';
 import { LangSwitcher } from 'features/lang-switcher';
-import { useTranslation } from 'react-i18next';
 import cls from './Sidebar.module.scss';
 
 interface IProps {
@@ -19,9 +19,9 @@ export const Sidebar: FC<IProps> = ({ className }) => {
   };
 
   return (
-    <div className={ClassNames(cls.sidebar, { [cls.visible]: state }, [className])}>
+    <div data-testid="container" className={ClassNames(cls.sidebar, { [cls.visible]: state }, [className])}>
       <div className={cls.container}>
-        <Button onClick={toggleSidebar}>
+        <Button data-testid="toggle-sidebar" onClick={toggleSidebar}>
           {t('TOGGLE')}
         </Button>
       </div>

@@ -9,8 +9,10 @@ export const Button: FC<IProps> = ({
   className,
   children,
   onClick,
+  ...props
 }) => (
   <button
+    {...props}
     onClick={onClick}
     className={ClassNames('', {}, [className])}
   >

@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -14,6 +16,11 @@ export default {
   // cacheDirectory: "C:\\Users\\Gunga\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls, instances, contexts and results before every test
+  globals: {
+    __IS_DEV__: true,
+    __API__: '',
+    __PROJECT__: 'jest',
+  },
   clearMocks: true,
   testEnvironment: 'jsdom',
   coveragePathIgnorePatterns: [
@@ -21,6 +28,7 @@ export default {
   ],
   moduleDirectories: [
     'node_modules',
+    'src',
   ],
   moduleFileExtensions: [
     'js',
@@ -34,9 +42,14 @@ export default {
   ],
   rootDir: '../../',
   modulePaths: [
-    '<rootDir>/src/',
+    '<rootDir>src/',
   ],
-  setupFilesAfterEnv: ['<rootDir>/config/jest/jest-setup.ts'],
+
+  setupFilesAfterEnv: ['<rootDir>/config/jest/jestSetup.ts'],
+  moduleNameMapper: {
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    '\\.(css|less|scss)$': 'identity-obj-proxy',
+  },
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
 
@@ -108,7 +121,7 @@ export default {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  preset: 'ts-jest',
+  // preset: 'ts-jest',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -159,9 +172,9 @@ export default {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: [
-    '<rootDir>src/**/*(*.)@(spec|test).[jt]s?(x)',
-  ],
+  // testMatch: [
+  //   '<rootDir>src/**/*(*.)@(spec|test).[jt]s?(x)',
+  // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
@@ -178,9 +191,9 @@ export default {
   // testRunner: "jest-circus/runner",
 
   // A map from regular expressions to paths to transformers
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
+  // transform: {
+  //   '^.+\\.tsx?$': 'ts-jest',
+  // },
 
   // An array of regexp pattern strings that are matched against
   // all source file paths, matched files will skip transformation
