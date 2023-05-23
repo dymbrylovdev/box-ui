@@ -8,7 +8,7 @@ on:
 
 jobs:
   pipeline:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -25,12 +25,12 @@ jobs:
       - name: install modules
         run: npm install
       - name: build prod
-        run: build:prod
+        run: npm run build:prod
       - name: lint ts
-        run: lint:ts
+        run: npm run lint:ts
       - name: lint scss
-        run: lint:scss
+        run: npm run lint:scss
       - name: test unit
-        run: test:unit
+        run: npm run test:unit
       - name: storybook build
-        run: storybook:build
+        run: npm run storybook:build
