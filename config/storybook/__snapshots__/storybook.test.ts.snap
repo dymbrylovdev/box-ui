@@ -179,7 +179,7 @@ exports[`Storyshots shared/Loader Primary 1`] = `
   className="app light"
 >
   <div
-    className="ldsRoller  primary"
+    className="lds_roller  primary"
   >
     <div />
     <div />
@@ -198,7 +198,7 @@ exports[`Storyshots shared/Loader Secondary 1`] = `
   className="app light"
 >
   <div
-    className="ldsRoller  secondary"
+    className="lds_roller  secondary"
   >
     <div />
     <div />
