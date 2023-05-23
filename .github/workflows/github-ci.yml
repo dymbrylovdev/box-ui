@@ -24,8 +24,6 @@ jobs:
 
       - name: install modules
         run: npm install
-      - name: build dev
-        run: build:dev
       - name: build prod
         run: build:prod
       - name: lint ts
