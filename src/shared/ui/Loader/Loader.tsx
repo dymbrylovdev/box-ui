@@ -13,7 +13,7 @@ interface IProps {
 }
 
 const Loader: FC<IProps> = ({ className, theme }) => (
-  <div className={ClassNames(cls.ldsRoller, {}, [className, cls[theme]])}>
+  <div className={ClassNames(cls.lds_roller, {}, [className, cls[theme]])}>
     <div />
     <div />
     <div />
