@@ -6,7 +6,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
 
   const typeScriptLoader = {
     test: /\.tsx?$/,
-    use: 'ts-loader',
+    use: 'ts-Loader',
     exclude: /node_modules/,
   };
 
@@ -22,7 +22,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     test: /\.(png|jpe?g|gif)$/i,
     use: [
       {
-        loader: 'file-loader',
+        loader: 'file-Loader',
       },
     ],
   };
@@ -31,7 +31,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     test: /\.m?js$/,
     exclude: /node_modules/,
     use: {
-      loader: 'babel-loader',
+      loader: 'babel-Loader',
       options: {
         presets: ['@babel/preset-env'],
       },

@@ -1,11 +1,9 @@
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 export const buildStyleLoaders = (isDev: boolean) => {
-  return  {
+  return {
     test: /\.s[ac]ss$/i,
     use: [
-      // Creates `style` nodes from JS strings
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-      // Translates CSS into CommonJS
       {
         loader: 'css-loader',
         options: {
@@ -16,7 +14,6 @@ export const buildStyleLoaders = (isDev: boolean) => {
           },
         },
       },
-      // Compiles Sass to CSS
       'sass-loader',
     ],
   };

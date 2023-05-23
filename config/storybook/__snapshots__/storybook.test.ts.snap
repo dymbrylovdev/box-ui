@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Shared/AppLink Secondary Dark 1`] = `
+<div
+  className="app light"
+>
+  <div
+    className="app dark"
+  >
+    <a
+      className="appLink  secondary"
+      href="/"
+      onClick={[Function]}
+    >
+      SECONDARY
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Widgetes/ErrorPage Dark 1`] = `
+<div
+  className="app light"
+>
+  <div
+    className="app dark"
+  >
+    <div
+      className="ErrorPage "
+    >
+      <p>
+        Произошла непредвиденная ошибка
+      </p>
+      <button
+        className=" "
+        onClick={[Function]}
+        type="button"
+      >
+        Обновить страницу
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Widgetes/ErrorPage Light 1`] = `
+<div
+  className="app light"
+>
+  <div
+    className="ErrorPage "
+  >
+    <p>
+      Произошла непредвиденная ошибка
+    </p>
+    <button
+      className=" "
+      onClick={[Function]}
+      type="button"
+    >
+      Обновить страницу
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Widgetes/Sidebar Dark 1`] = `
+<div
+  className="app light"
+>
+  <div
+    className="app dark"
+  >
+    <div
+      className="sidebar "
+      data-testid="container"
+    >
+      <div
+        className="container"
+      >
+        <button
+          className=" "
+          data-testid="toggle-sidebar"
+          onClick={[Function]}
+          type="button"
+        >
+          TOGGLE
+        </button>
+      </div>
+      <div
+        className="theme"
+      >
+        <button
+          className="  "
+          onClick={[Function]}
+          type="button"
+        >
+          <div />
+        </button>
+        <button
+          className=" "
+          onClick={[Function]}
+        >
+          LANG
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Widgetes/Sidebar Light 1`] = `
+<div
+  className="app light"
+>
+  <div
+    className="sidebar "
+    data-testid="container"
+  >
+    <div
+      className="container"
+    >
+      <button
+        className=" "
+        data-testid="toggle-sidebar"
+        onClick={[Function]}
+        type="button"
+      >
+        TOGGLE
+      </button>
+    </div>
+    <div
+      className="theme"
+    >
+      <button
+        className="  "
+        onClick={[Function]}
+        type="button"
+      >
+        <div />
+      </button>
+      <button
+        className=" "
+        onClick={[Function]}
+      >
+        LANG
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots shared/Button Primary 1`] = `
+<div
+  className="app light"
+>
+  <button
+    className=" "
+    type="button"
+  >
+    Click
+  </button>
+</div>
+`;
+
+exports[`Storyshots shared/Button Secondary 1`] = `
+<div
+  className="app light"
+>
+  <button
+    className=" "
+    type="button"
+  />
+</div>
+`;
+
+exports[`Storyshots shared/Loader Primary 1`] = `
+<div
+  className="app light"
+>
+  <div
+    className="ldsRoller  primary"
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>
+</div>
+`;
+
+exports[`Storyshots shared/Loader Secondary 1`] = `
+<div
+  className="app light"
+>
+  <div
+    className="ldsRoller  secondary"
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>
+</div>
+`;

@@ -111,7 +111,7 @@ export default {
   // moduleNameMapper: {},
 
   // An array of regexp pattern strings, matched against all module
-  // paths before considered 'visible' to the module loader
+  // paths before considered 'visible' to the module Loader
   // modulePathIgnorePatterns: [],
 
   // Activates notifications for test results
@@ -203,7 +203,7 @@ export default {
   // ],
 
   // An array of regexp pattern strings that are matched against
-  // all modules before the module loader will automatically return a mock for them
+  // all modules before the module Loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
 
   // Indicates whether each individual test should be reported during the run
