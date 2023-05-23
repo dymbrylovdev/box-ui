@@ -39,10 +39,10 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
   };
 
   return [
+    fileLoader,
+    svgLoader,
+    babelLoader,
     typeScriptLoader,
     styleLoader,
-    svgLoader,
-    fileLoader,
-    babelLoader,
   ];
 };
