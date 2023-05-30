@@ -13,12 +13,12 @@ const meta: Meta<typeof ErrorPage> = {
 export default meta;
 type Story = StoryObj<typeof ErrorPage>;
 
-export const Light: Story = {
+export const ErrorPageLight: Story = {
   args: {
   },
 };
 
-export const Dark: Story = {
+export const ErrorPageDark: Story = {
   args: {
   },
   decorators: [

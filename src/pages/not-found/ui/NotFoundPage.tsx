@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { ClassNames } from 'shared/lib/halpers/classNames';
 import { useTranslation } from 'react-i18next';
+import { ClassNames } from 'shared/lib';
 import cls from './NotFoundPage.module.scss';
 
 interface IProps {

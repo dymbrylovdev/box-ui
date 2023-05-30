@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { ClassNames } from 'shared/lib/halpers/classNames';
 import { Loader } from 'shared/ui';
+import { ClassNames } from 'shared/lib';
 import cls from './LoaderPage.module.scss';
 
 interface IProps {

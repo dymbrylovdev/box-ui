@@ -22,7 +22,7 @@ export const Sidebar: FC<IProps> = ({ className }) => {
   };
 
   return (
-    <div data-testid="container" className={ClassNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
+    <div data-testid="sidebar" className={ClassNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
       <div className={cls.navigation_container}>
         <AppLink
           theme={AppLinkTheme.REVERT_PRIMARY}

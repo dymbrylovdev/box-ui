@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
-import { ClassNames } from 'shared/lib/halpers/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
+import { ClassNames } from 'shared/lib';
 import cls from './Navbar.module.scss';
 
 interface IProps {
