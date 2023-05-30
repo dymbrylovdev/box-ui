@@ -6,7 +6,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
 
   const typeScriptLoader = {
     test: /\.tsx?$/,
-    use: 'ts-Loader',
+    use: 'ts-loader',
     exclude: /node_modules/,
   };
 
