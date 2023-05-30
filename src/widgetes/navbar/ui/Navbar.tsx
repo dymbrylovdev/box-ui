@@ -13,10 +13,7 @@ export const Navbar: FC<IProps> = ({ className }) => {
 
   return (
     <div className={ClassNames(cls.navbar, {}, [className])}>
-      <div>
-        <AppLink theme={AppLinkTheme.SECONDARY} to="/" className="">{t('MAIN')}</AppLink>
-        <AppLink theme={AppLinkTheme.SECONDARY} to="/cart">{t('CARD')}</AppLink>
-      </div>
+      <div />
     </div>
   );
 };

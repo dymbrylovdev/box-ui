@@ -12,7 +12,7 @@ interface IProps {
   theme?: ThemeLoader;
 }
 
-const Loader: FC<IProps> = ({ className, theme }) => (
+const Loader: FC<IProps> = ({ className, theme = ThemeLoader.PRIMARY }) => (
   <div className={ClassNames(cls.lds_roller, {}, [className, cls[theme]])}>
     <div />
     <div />

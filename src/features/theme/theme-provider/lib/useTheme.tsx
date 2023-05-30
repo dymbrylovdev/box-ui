@@ -18,7 +18,7 @@ export const useTheme = () : IUseResult => {
   };
 
   return {
-    theme: theme || Themes.LIGHT,
+    theme,
     toggleTheme,
   };
 };
