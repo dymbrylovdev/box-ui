@@ -1,6 +1,6 @@
 import { useContext } from 'react';
+import { Themes } from 'features/theme';
 import { THEME_STORAGE_KEY, ThemeContext } from '../ui/ThemeProvider';
-import { Themes } from './constants';
 
 interface IUseResult {
   theme: Themes,
@@ -17,5 +17,8 @@ export const useTheme = () : IUseResult => {
     setTheme(newTheme);
   };
 
-  return { theme, toggleTheme };
+  return {
+    theme,
+    toggleTheme,
+  };
 };

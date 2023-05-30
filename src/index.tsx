@@ -3,15 +3,22 @@ import { BrowserRouter } from 'react-router-dom';
 import { lazy } from 'react';
 import { ThemeProvider } from 'features/theme';
 import './shared/config/i18n/i18n';
+import { I18nextProvider } from 'react-i18next';
+import i18n from 'shared/config/i18n/i18n';
+import { ErrorBoundary } from 'app/providers/errorBoundary';
 
 const App = lazy(async () => import('./app'));
 
 const root = createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter>
+  <ErrorBoundary>
     <ThemeProvider>
-      <App />
+      <I18nextProvider i18n={i18n}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </I18nextProvider>
     </ThemeProvider>
-  </BrowserRouter>,
+  </ErrorBoundary>,
 );

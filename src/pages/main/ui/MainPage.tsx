@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { ClassNames } from 'shared/lib/halpers/classNames';
 import { useTranslation } from 'react-i18next';
+import { ClassNames } from 'shared/lib';
 
 interface IProps {
   className?: any;

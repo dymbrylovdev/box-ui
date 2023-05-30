@@ -1,18 +1,19 @@
 import React, { FC } from 'react';
-import { ClassNames } from 'shared/lib/halpers/classNames';
 import { Link, LinkProps } from 'react-router-dom';
+import { ClassNames } from 'shared/lib';
 import cls from './AppLink.module.scss';
 
 export enum AppLinkTheme {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
+  REVERT_PRIMARY = 'revert_primary',
+  REVERT_SECONDARY = 'revert_secondary',
 }
 
 interface IProps extends LinkProps {
   className?: any;
   theme?: AppLinkTheme;
 }
-
 export const AppLink: FC<IProps> = (props) => {
   const {
     to,

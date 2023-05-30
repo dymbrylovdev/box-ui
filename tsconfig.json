@@ -11,13 +11,19 @@
     "paths": {
       "*" : ["./src/*"]
     },
-
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./config/jest/jestSetup.ts",
+    "./config/storybook"
+  ]
 }

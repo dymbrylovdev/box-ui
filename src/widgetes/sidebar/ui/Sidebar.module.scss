@@ -1,17 +1,37 @@
 .sidebar {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 20px;
+  position: relative;
   width: var(--sidebar-width);
   height: calc(100vh - var(--navbar-higth));
   transition: width .3s;
   background-color: var(--revert-bg-color);
 }
 
-.container {
-  flex-grow: 1;
+.navigation_container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.btmTheme {
+  position: absolute;
+  right: -40px;
+  bottom: 100px;
+}
+
+.icon {
+  fill: var(--revert-primary-color);
+}
+
+.link {
+  margin-left: 10px;
+  opacity: 1;
+  transition: 0.4s opacity;
 }
 
 .theme {
@@ -20,9 +40,22 @@
   gap: 20px;
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  justify-content: center;
+  width: 100%;
 }
 
-.visible {
+.collapsed {
   width: var(--sidebar-width-collased);
+
+  .theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link {
+    opacity: 0;
+    transition: 0.2s opacity;
+    width: 0;
+  }
 }
