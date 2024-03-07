@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Modal>;
 export const Light: Story = {
   args: {
     isOpen: false,
-    children: <div>Lorem ipsum dolor sit ame</div>,
+    children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem hic nobis odio quod reprehenderit repudiandae. Delectus dignissimos, molestiae! Atque cum debitis delectus deleniti eius esse magnam minus mollitia ullam voluptates.',
   },
 };

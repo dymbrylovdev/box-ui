@@ -176,7 +176,7 @@ export default {
   // The test environment that will be used for testing
 
   // Options that will be passed to the testEnvironment
-  testEnvironmentOptions: {},
+  // testEnvironmentOptions: {},
 
   // Adds a location field to test results
   // testLocationInResults: false,
