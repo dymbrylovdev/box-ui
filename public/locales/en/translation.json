@@ -4,5 +4,7 @@
   "TOGGLE": "Toggle",
   "MAIN": "main",
   "CARD": "card",
-  "NOT_FOUND": "not found page"
+  "NOT_FOUND": "not found page",
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Обновить страницу": "Обновить страницу"
 }

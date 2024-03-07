@@ -15,6 +15,7 @@ export const useTheme = () : IUseResult => {
       ? Themes.DARK : Themes.LIGHT;
     localStorage.setItem(THEME_STORAGE_KEY, newTheme);
     setTheme(newTheme);
+    document.body.className = newTheme;
   };
 
   return {

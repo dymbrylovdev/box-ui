@@ -10,7 +10,7 @@ const Index = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={ClassNames('app', {}, [theme])}>
+    <div className={ClassNames('app', {}, [])}>
       <Suspense fallback={<div>Translate...</div>}>
         <Navbar />
         <div className="container-content">

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storyBook/ThemeDecorator/ThemeDecorator';
+import { ThemeDecorator } from 'shared/config';
 import { Themes } from 'features/theme';
 import { ErrorPage } from './ErrorPage';
 
@@ -13,14 +13,11 @@ const meta: Meta<typeof ErrorPage> = {
 export default meta;
 type Story = StoryObj<typeof ErrorPage>;
 
-export const ErrorPageLight: Story = {
-  args: {
-  },
+export const light: Story = {
 };
 
-export const ErrorPageDark: Story = {
-  args: {
-  },
+export const dark: Story = {
+  args: {},
   decorators: [
     ThemeDecorator(Themes.DARK),
   ],

@@ -2,10 +2,10 @@
 
 exports[`Storyshots Shared/AppLink Primary Dark 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
-    className="app dark"
+    className="app app_dark_theme"
   >
     <a
       className="appLink  primary"
@@ -20,10 +20,10 @@ exports[`Storyshots Shared/AppLink Primary Dark 1`] = `
 
 exports[`Storyshots Shared/AppLink Primary Light 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
-    className="app light"
+    className="app app_light_theme"
   >
     <a
       className="appLink  primary"
@@ -38,10 +38,10 @@ exports[`Storyshots Shared/AppLink Primary Light 1`] = `
 
 exports[`Storyshots Shared/AppLink Revert Primary Light 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
-    className="app light"
+    className="app app_light_theme"
   >
     <a
       className="appLink  revert_primary"
@@ -56,10 +56,10 @@ exports[`Storyshots Shared/AppLink Revert Primary Light 1`] = `
 
 exports[`Storyshots Shared/AppLink Revert Secondary Dark 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
-    className="app dark"
+    className="app app_dark_theme"
   >
     <a
       className="appLink  revert_secondary"
@@ -74,10 +74,10 @@ exports[`Storyshots Shared/AppLink Revert Secondary Dark 1`] = `
 
 exports[`Storyshots Shared/AppLink Secondary Dark 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
-    className="app dark"
+    className="app app_dark_theme"
   >
     <a
       className="appLink  secondary"
@@ -92,10 +92,10 @@ exports[`Storyshots Shared/AppLink Secondary Dark 1`] = `
 
 exports[`Storyshots Shared/AppLink Secondary Light 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
-    className="app light"
+    className="app app_light_theme"
   >
     <a
       className="appLink  secondary"
@@ -108,12 +108,12 @@ exports[`Storyshots Shared/AppLink Secondary Light 1`] = `
 </div>
 `;
 
-exports[`Storyshots Widgetes/ErrorPage Error Page Dark 1`] = `
+exports[`Storyshots Widgetes/ErrorPage Dark 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
-    className="app dark"
+    className="app app_dark_theme"
   >
     <div
       className="ErrorPage "
@@ -133,33 +133,12 @@ exports[`Storyshots Widgetes/ErrorPage Error Page Dark 1`] = `
 </div>
 `;
 
-exports[`Storyshots Widgetes/ErrorPage Error Page Light 1`] = `
-<div
-  className="app light"
->
-  <div
-    className="ErrorPage "
-  >
-    <p>
-      Произошла непредвиденная ошибка
-    </p>
-    <button
-      className="Button size_m undefined "
-      onClick={[Function]}
-      type="button"
-    >
-      Обновить страницу
-    </button>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Widgetes/Sidebar Dark 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
-    className="app dark"
+    className="app app_dark_theme"
   >
     <div
       className="sidebar "
@@ -226,7 +205,7 @@ exports[`Storyshots Widgetes/Sidebar Dark 1`] = `
 
 exports[`Storyshots Widgetes/Sidebar Light 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
     className="sidebar "
@@ -292,10 +271,10 @@ exports[`Storyshots Widgetes/Sidebar Light 1`] = `
 
 exports[`Storyshots shared/Button Background 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
-    className="app dark"
+    className="app app_dark_theme"
   >
     <button
       className="Button size_m background "
@@ -309,7 +288,7 @@ exports[`Storyshots shared/Button Background 1`] = `
 
 exports[`Storyshots shared/Button Background Inverted 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <button
     className="Button size_m backgroundInverted "
@@ -322,7 +301,7 @@ exports[`Storyshots shared/Button Background Inverted 1`] = `
 
 exports[`Storyshots shared/Button Clear 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <button
     className="Button size_m clear "
@@ -335,7 +314,7 @@ exports[`Storyshots shared/Button Clear 1`] = `
 
 exports[`Storyshots shared/Button Clear Inverted 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <button
     className="Button size_m clearInverted "
@@ -348,7 +327,7 @@ exports[`Storyshots shared/Button Clear Inverted 1`] = `
 
 exports[`Storyshots shared/Button Disabled 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <button
     className="Button size_m backgroundInverted disabled "
@@ -362,7 +341,7 @@ exports[`Storyshots shared/Button Disabled 1`] = `
 
 exports[`Storyshots shared/Button Outline 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <button
     className="Button size_m outline "
@@ -375,7 +354,7 @@ exports[`Storyshots shared/Button Outline 1`] = `
 
 exports[`Storyshots shared/Button Primary L 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <button
     className="Button size_l undefined "
@@ -388,7 +367,7 @@ exports[`Storyshots shared/Button Primary L 1`] = `
 
 exports[`Storyshots shared/Button Primary XL 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <button
     className="Button size_xl undefined "
@@ -401,7 +380,7 @@ exports[`Storyshots shared/Button Primary XL 1`] = `
 
 exports[`Storyshots shared/Button Square 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <button
     className="Button square size_m backgroundInverted "
@@ -414,7 +393,7 @@ exports[`Storyshots shared/Button Square 1`] = `
 
 exports[`Storyshots shared/Button Square L 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <button
     className="Button square size_l backgroundInverted "
@@ -427,7 +406,7 @@ exports[`Storyshots shared/Button Square L 1`] = `
 
 exports[`Storyshots shared/Button Square XL 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <button
     className="Button square size_xl backgroundInverted "
@@ -440,7 +419,7 @@ exports[`Storyshots shared/Button Square XL 1`] = `
 
 exports[`Storyshots shared/Loader Primary 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
     className="lds_roller  primary"
@@ -459,7 +438,7 @@ exports[`Storyshots shared/Loader Primary 1`] = `
 
 exports[`Storyshots shared/Loader Secondary 1`] = `
 <div
-  className="app light"
+  className="app app_light_theme"
 >
   <div
     className="lds_roller  secondary"
