@@ -7,9 +7,7 @@ on: push
 jobs:
   chromatic:
     runs-on: ubuntu-latest
-    strategy:
-      secrets:
-        CHROMATIC_PROJECT_TOKEN: chpt_c3967633ede083e
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,4 +21,4 @@ jobs:
         uses: chromaui/action@latest
         with:
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: chpt_c3967633ede083e
