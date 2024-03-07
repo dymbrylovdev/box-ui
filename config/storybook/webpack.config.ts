@@ -28,6 +28,8 @@ export default async ({ config }: { config: webpack.Configuration }) => {
   });
 
   config.module.rules.push(buildStyleLoaders(true));
-
+  config.plugins.push(new DefinePlugin({
+    __IS_DEV__: true,
+  }));
   return config;
 };

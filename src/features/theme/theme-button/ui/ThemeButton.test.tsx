@@ -1,8 +1,8 @@
-import { render } from '@testing-library/react';
+import componentRender from 'shared/lib/halpers/componentRender/componentRender';
 import { ThemeButton } from './ThemeButton';
 
 describe('Widgetes Test Sidebar', () => {
   test('renders text', () => {
-    render(<ThemeButton />);
+    componentRender(<ThemeButton />);
   });
 });

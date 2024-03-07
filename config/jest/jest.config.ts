@@ -42,14 +42,30 @@ export default {
   ],
   rootDir: '../../',
   modulePaths: [
-    '<rootDir>src/',
+    '<rootDir>/src/',
   ],
-
   setupFilesAfterEnv: ['<rootDir>/config/jest/jestSetup.ts'],
   moduleNameMapper: {
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     '\\.(css|less|scss)$': 'identity-obj-proxy',
+    'src/(.*)$': '<rootDir>/src/$1',
   },
+  preset: 'ts-jest',
+  // A list of paths to directories that Jest should use to search for files in
+  roots: [
+    '<rootDir>',
+    'src',
+  ],
+  // A map from regular expressions to paths to transformers
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
+  // An array of regexp pattern strings that are matched against
+  // all source file paths, matched files will skip transformation
+  transformIgnorePatterns: [
+    '\\\\node_modules\\\\',
+    '\\.pnp\\.[^\\\\]+$',
+  ],
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
 
@@ -121,7 +137,6 @@ export default {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: 'ts-jest',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -142,11 +157,6 @@ export default {
   // restoreMocks: false,
 
   // The root directory that Jest should scan for tests and modules within
-
-  // A list of paths to directories that Jest should use to search for files in
-  // roots: [
-  //   "<rootDir>"
-  // ],
 
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
@@ -189,18 +199,6 @@ export default {
 
   // This option allows use of a custom test runner
   // testRunner: "jest-circus/runner",
-
-  // A map from regular expressions to paths to transformers
-  // transform: {
-  //   '^.+\\.tsx?$': 'ts-jest',
-  // },
-
-  // An array of regexp pattern strings that are matched against
-  // all source file paths, matched files will skip transformation
-  // transformIgnorePatterns: [
-  //   "\\\\node_modules\\\\",
-  //   "\\.pnp\\.[^\\\\]+$"
-  // ],
 
   // An array of regexp pattern strings that are matched against
   // all modules before the module Loader will automatically return a mock for them
