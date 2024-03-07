@@ -32,9 +32,7 @@ const MainPage: FC<IProps> = ({ className }) => {
 
   return (
     <div className={ClassNames('', {}, [className])}>
-      <Button onClick={login}>
-        {t('MAIN')}
-      </Button>
+      <Button onClick={login} />
     </div>
   );
 };
