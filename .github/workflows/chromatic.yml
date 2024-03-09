@@ -23,4 +23,4 @@ jobs:
           cypress: true
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: chpt_c3967633ede083e
-        env: CHROMATIC_ARCHIVE_LOCATION=./custom/dir
+#        env: CHROMATIC_ARCHIVE_LOCATION=./custom/dir
