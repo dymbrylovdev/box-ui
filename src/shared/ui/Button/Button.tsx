@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, type FC } from 'react';
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 import cls from './Button.module.scss';
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -49,7 +49,7 @@ export const Button: FC<ButtonProps> = (props) => {
   return (
     <button
       type="button"
-      className={ClassNames(cls.Button, mods, [className])}
+      className={classNames(cls.Button, mods, [className])}
       disabled={disabled}
       {...otherProps}
     >

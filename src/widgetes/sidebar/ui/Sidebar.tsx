@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 import { ThemeButton } from 'features/theme';
 import { AppLink, AppLinkTheme, Button } from 'shared/ui';
 import { LangSwitcher } from 'features/lang-switcher';
@@ -22,7 +22,7 @@ export const Sidebar: FC<IProps> = ({ className }) => {
   };
 
   return (
-    <div data-testid="sidebar" className={ClassNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
+    <div data-testid="sidebar" className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
       <div className={cls.navigation_container}>
         <AppLink
           theme={AppLinkTheme.REVERT_PRIMARY}

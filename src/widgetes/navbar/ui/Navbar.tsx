@@ -1,8 +1,8 @@
 import React, { FC, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 import { Modal } from 'shared/ui/Modal/Modal';
-import { Button } from 'shared/ui';
+import { Button, Input } from 'shared/ui';
 import { ButtonTheme } from 'shared/ui/Button/Button';
 import { Counter } from 'entities/Counter';
 import cls from './Navbar.module.scss';
@@ -20,7 +20,9 @@ export const Navbar: FC<IProps> = ({ className }) => {
   }, []);
 
   return (
-    <div className={ClassNames(cls.navbar, {}, [className])}>
+    <div className={classNames(cls.navbar, {}, [className])}>
+      <Counter />
+
       <Button
         theme={ButtonTheme.CLEAR_INVERTED}
         className={cls.links}
@@ -29,10 +31,15 @@ export const Navbar: FC<IProps> = ({ className }) => {
         {t('Войти')}
       </Button>
       <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-        {/* eslint-disable-next-line */}
-        {t('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.')}
+        <Input
+          label={t('Логин')}
+          autofocus
+        />
+        <Input
+          label={t('Прароль')}
+          autofocus
+        />
       </Modal>
-      <Counter />
     </div>
   );
 };

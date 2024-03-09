@@ -4,7 +4,12 @@ import { RouterConfig } from 'app/providers/router';
 import { LoaderPage } from 'pages/loader';
 
 export const AppRouter = () => (
-  <Suspense fallback={<LoaderPage />}>
+  <Suspense fallback={(
+    <div style={{ flex: 1 }}>
+      <LoaderPage />
+    </div>
+  )}
+  >
     <Routes>
       {Object.values(RouterConfig).map(({ element, path }) => (
         <Route

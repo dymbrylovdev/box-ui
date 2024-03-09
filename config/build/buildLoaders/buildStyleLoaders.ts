@@ -1,5 +1,6 @@
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 export const buildStyleLoaders = (isDev: boolean) => {
+  console.log("isDev", isDev)
   return {
     test: /\.s[ac]ss$/i,
     use: [
@@ -9,7 +10,7 @@ export const buildStyleLoaders = (isDev: boolean) => {
         options: {
           modules: {
             auto: (resourcePath: string) => Boolean(resourcePath.includes('.module.')),
-            localIdentName: !isDev ? '[path][name]__[local]--[hash:base64:5]'
+            localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]'
               : '[hash:base64:8]',
           },
         },

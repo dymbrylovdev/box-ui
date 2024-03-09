@@ -9,16 +9,16 @@ const paths: BuildPath = {
   src: path.resolve(__dirname, 'src'),
 };
 
-const PORT = 3000;
-
 const config = (env: EnvOptions) => {
-  const isDevEnv = env.mode === 'development';
+  const mode = env.mode || 'development';
+  const PORT = env.port || 3000;
+  const isDev = mode === 'development';
 
   return buildWebpackConfig({
     paths,
-    mode: env.mode || 'development',
-    port: env.port || PORT,
-    isDev: isDevEnv,
+    mode,
+    isDev,
+    port: PORT,
   });
 };
 

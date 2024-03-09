@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 import cls from './Loader.module.scss';
 
 export enum ThemeLoader {
@@ -12,8 +12,8 @@ interface IProps {
   theme?: ThemeLoader;
 }
 
-const Loader: FC<IProps> = ({ className, theme = ThemeLoader.PRIMARY }) => (
-  <div className={ClassNames(cls.lds_roller, {}, [className, cls[theme]])}>
+export const Loader: FC<IProps> = ({ className, theme = ThemeLoader.PRIMARY }) => (
+  <div className={classNames(cls.lds_roller, {}, [className, cls[theme]])}>
     <div />
     <div />
     <div />
@@ -24,5 +24,3 @@ const Loader: FC<IProps> = ({ className, theme = ThemeLoader.PRIMARY }) => (
     <div />
   </div>
 );
-
-export default Loader;

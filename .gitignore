@@ -5,3 +5,6 @@
 #cаtalogs
 /build
 node_modules
+cypress
+storybook-static
+build-storybook.log

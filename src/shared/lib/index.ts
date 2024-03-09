@@ -1,1 +1,1 @@
-export { ClassNames } from 'shared/lib/halpers/className/classNames';
+export { classNames } from 'shared/lib/halpers/className/classNames';

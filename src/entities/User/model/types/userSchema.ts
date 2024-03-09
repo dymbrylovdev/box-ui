@@ -4,5 +4,5 @@ export interface UserSchema {
 
 export interface IUser {
   id: number;
-  name: number;
+  username: number;
 }
