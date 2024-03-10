@@ -1,6 +1,5 @@
 import { act, screen } from '@testing-library/react';
-import { userEvent } from '@storybook/testing-library';
-import componentRender from 'shared/lib/halpers/componentRender/componentRender';
+import { componentRender } from 'shared/lib';
 import { Counter } from './Counter';
 
 describe('Counter', () => {

@@ -4,7 +4,7 @@ import { useTheme } from 'features/theme';
 import { Button } from 'shared/ui';
 import { ThemeDarkSVG, ThemeLightSVG } from 'shared/assets';
 import { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 
 interface IProps {
   className?: any;
@@ -18,7 +18,7 @@ export const ThemeButton: FC<IProps> = ({ className }) => {
       theme={ButtonTheme.CLEAR}
       size={ButtonSize.XL}
       onClick={toggleTheme}
-      className={ClassNames('', {}, [className])}
+      className={classNames('', {}, [className])}
     >
       {theme === Themes.DARK ? <ThemeDarkSVG /> : <ThemeLightSVG />}
     </Button>

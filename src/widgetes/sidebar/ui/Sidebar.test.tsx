@@ -1,6 +1,6 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-import componentRender from 'shared/lib/halpers/componentRender/componentRender';
+import { componentRender } from 'shared/lib';
 import { Sidebar } from './Sidebar';
 
 describe('Widgetes Test Sidebar', () => {

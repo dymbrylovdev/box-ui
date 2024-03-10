@@ -41,6 +41,22 @@ server.post('/login', (req, res) => {
   }
 });
 
+server.get('/users', (req, res) => {
+  try {
+    const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+    const { users = [] } = db;
+
+    if (users) {
+      return res.json(users);
+    }
+
+    return res.status(403).json({ message: 'User not found' });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ message: e.message });
+  }
+});
+
 // проверяем, авторизован ли пользователь
 // eslint-disable-next-line
 server.use((req, res, next) => {

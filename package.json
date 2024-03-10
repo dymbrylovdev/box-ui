@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --env port=3000",
     "start:dev:server": "node ./json-server/index.js",
-    "build:dev": "webpack --env mode=development",
+    "build:dev": "webpack --cros mode=development",
     "build:prod": "webpack --env mode=production",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
@@ -14,9 +14,8 @@
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "storybook:build": "storybook build -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "chromatic": "npx chromatic --project-token=chpt_c3967633ede083e"
+    "chromatic": "npx chromatic --project-token=chpt_c3967633ede083e "
   },
   "keywords": [],
   "author": "",
@@ -25,6 +24,7 @@
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.21.0",
+    "@chromatic-com/cypress": "^0.5.5",
     "@storybook/addon-essentials": "^7.0.5",
     "@storybook/addon-interactions": "^7.0.5",
     "@storybook/addon-links": "^7.0.5",
@@ -49,6 +49,7 @@
     "babel-loader": "^9.1.2",
     "chromatic": "^11.0.4",
     "css-loader": "^6.7.3",
+    "cypress": "^13.6.6",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -75,6 +76,7 @@
     "ts-jest": "^29.0.5",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^4.9.5",
     "webpack": "^5.75.0",
     "webpack-bundle-analyzer": "^4.8.0",

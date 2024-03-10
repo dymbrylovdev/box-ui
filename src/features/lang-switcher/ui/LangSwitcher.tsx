@@ -3,7 +3,7 @@ import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui';
 import { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 
 interface IProps {
   className?: any;
@@ -21,7 +21,7 @@ export const LangSwitcher: FC<IProps> = ({ className }) => {
       theme={ButtonTheme.BACKGROUND_INVERTED}
       size={ButtonSize.L}
       onClick={toggleTranslate}
-      className={ClassNames('', {}, [className])}
+      className={classNames('', {}, [className])}
     >
       {t('LANG')}
     </Button>

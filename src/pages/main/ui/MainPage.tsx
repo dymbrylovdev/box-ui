@@ -1,8 +1,10 @@
-import { FC, useEffect } from 'react';
+import { FC, Suspense, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 import axios from 'axios';
 import { Button } from 'shared/ui';
+import { useGetUsersQuery } from 'entities/User';
+import { LoaderPage } from 'pages/loader';
 
 interface IProps {
   className?: any;
@@ -10,11 +12,12 @@ interface IProps {
 
 const MainPage: FC<IProps> = ({ className }) => {
   const { t } = useTranslation();
+  const { data, isLoading } = useGetUsersQuery();
   const login = async () => {
     try {
       const authData = {
         username: 'admin',
-        password: '1213',
+        password: '123',
       };
       const response = await axios.post('http://localhost:8000/login', authData);
 
@@ -26,12 +29,18 @@ const MainPage: FC<IProps> = ({ className }) => {
       console.log(e);
     }
   };
+  console.log(data);
 
-  useEffect(() => {
-  }, []);
+  if (isLoading) {
+    return (
+      <div style={{ height: '100%' }}>
+        <LoaderPage />
+      </div>
+    );
+  }
 
   return (
-    <div className={ClassNames('', {}, [className])}>
+    <div className={classNames('', {}, [className])}>
       <Button onClick={login}>
         {t('MAIN')}
       </Button>
