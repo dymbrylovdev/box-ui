@@ -28,12 +28,9 @@ export default {
   ],
   moduleDirectories: [
     'node_modules',
-    'src',
   ],
   moduleFileExtensions: [
     'js',
-    'mjs',
-    'cjs',
     'jsx',
     'ts',
     'tsx',
@@ -42,19 +39,22 @@ export default {
   ],
   rootDir: '../../',
   modulePaths: [
-    '<rootDir>/src/',
+    '<rootDir>src',
   ],
-  setupFilesAfterEnv: ['<rootDir>/config/jest/jestSetup.ts'],
+  setupFilesAfterEnv: ['<rootDir>config/jest/jestSetup.ts'],
   moduleNameMapper: {
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     '\\.(css|less|scss)$': 'identity-obj-proxy',
-    'src/(.*)$': '<rootDir>/src/$1',
   },
-  preset: 'ts-jest',
+  // preset: 'ts-jest',
   // A list of paths to directories that Jest should use to search for files in
-  roots: [
-    '<rootDir>',
-    'src',
+  // roots: [
+  //   '<rootDir>',
+  //   'src',
+  // ],
+  // The glob patterns Jest uses to detect test files
+  testMatch: [
+    '<rootDir>src/**/*(*.)@(spec|test).[jt]s?(x)',
   ],
   // A map from regular expressions to paths to transformers
   transform: {
@@ -62,10 +62,10 @@ export default {
   },
   // An array of regexp pattern strings that are matched against
   // all source file paths, matched files will skip transformation
-  transformIgnorePatterns: [
-    '\\\\node_modules\\\\',
-    '\\.pnp\\.[^\\\\]+$',
-  ],
+  // transformIgnorePatterns: [
+  //   '\\\\node_modules\\\\',
+  //   '\\.pnp\\.[^\\\\]+$',
+  // ],
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
 
@@ -180,11 +180,6 @@ export default {
 
   // Adds a location field to test results
   // testLocationInResults: false,
-
-  // The glob patterns Jest uses to detect test files
-  // testMatch: [
-  //   '<rootDir>src/**/*(*.)@(spec|test).[jt]s?(x)',
-  // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [

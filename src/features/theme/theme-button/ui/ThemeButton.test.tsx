@@ -1,4 +1,4 @@
-import componentRender from 'shared/lib/halpers/componentRender/componentRender';
+import { componentRender } from 'shared/lib';
 import { ThemeButton } from './ThemeButton';
 
 describe('Widgetes Test Sidebar', () => {

@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { ReducersMapObject } from 'redux';
-import { userApi, userReducer } from 'entities/User';
-import { counterReducer } from 'entities/Counter';
+import { counterReducer } from '../../../../entities/Counter';
+import { userApi, userReducer } from '../../../../entities/User';
 import { StateSchema } from './StateSchema';
 
 export function createReduxStore(initialState?: StateSchema) {
