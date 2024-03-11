@@ -1,12 +1,16 @@
 import type { UserSchema } from './model/types/userSchema';
-
-import { useGetUsersQuery, userApi, UserReducerReturnType } from './servises/userAPI';
+import { IUser } from './model/types/userSchema';
 
 export { userReducer } from './model/slice/userSlice';
 
 export {
-  UserSchema,
   useGetUsersQuery,
   userApi,
   UserReducerReturnType,
+  useAuthUserMutation,
+} from './servises/userAPI';
+
+export {
+  UserSchema,
+  IUser,
 };

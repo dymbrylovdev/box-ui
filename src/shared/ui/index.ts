@@ -1,3 +1,4 @@
+export { ModalProps } from './Modal/Modal';
 export { Input } from './Input/Input';
 export { Loader } from './Loader/Loader';
 export { AppLink } from './AppLink/AppLink';

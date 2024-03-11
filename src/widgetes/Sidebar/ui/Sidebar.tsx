@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib';
-import { ThemeButton } from 'features/theme';
+import { ThemeButton } from 'features/Theme';
 import { AppLink, AppLinkTheme, Button } from 'shared/ui';
-import { LangSwitcher } from 'features/lang-switcher';
+import { LangSwitcher } from 'features/LangSwitcher';
 import { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { RouterPath } from 'shared/config/RouterConfig/RouterConfig';
 import { ClarityListSVG, HomeSVG } from 'shared/assets';

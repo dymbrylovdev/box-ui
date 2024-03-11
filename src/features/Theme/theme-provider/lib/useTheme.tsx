@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Themes } from 'features/theme';
+import { Themes } from 'features/Theme';
 import { THEME_STORAGE_KEY, ThemeContext } from '../ui/ThemeProvider';
 
 interface IUseResult {

@@ -2,11 +2,11 @@ import React, {
   ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { Portal } from 'shared/ui/Portal/Portal';
-import { useTheme } from 'features/theme';
+import { useTheme } from 'features/Theme';
 import { classNames } from 'shared/lib';
 import cls from './Modal.module.scss';
 
-interface ModalProps {
+export interface ModalProps {
   className?: string;
   children?: ReactNode;
   isOpen?: boolean;

@@ -5,6 +5,7 @@ import { Modal } from 'shared/ui/Modal/Modal';
 import { Button, Input } from 'shared/ui';
 import { ButtonTheme } from 'shared/ui/Button/Button';
 import { Counter } from 'entities/Counter';
+import { AuthUserModal } from 'features/AuthUser/ui/Modal/AuthUserModal/AuthUserModal';
 import cls from './Navbar.module.scss';
 
 interface IProps {
@@ -30,16 +31,10 @@ export const Navbar: FC<IProps> = ({ className }) => {
       >
         {t('Войти')}
       </Button>
-      <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-        <Input
-          label={t('Логин')}
-          autofocus
-        />
-        <Input
-          label={t('Прароль')}
-          autofocus
-        />
-      </Modal>
+      <AuthUserModal
+        isOpen={isAuthModal}
+        onClose={onToggleModal}
+      />
     </div>
   );
 };
