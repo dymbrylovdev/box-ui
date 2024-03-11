@@ -1,7 +1,7 @@
 import type { UserSchema } from './model/types/userSchema';
 import { IUser } from './model/types/userSchema';
 
-export { userReducer } from './model/slice/userSlice';
+export { userReducer, userActions } from './model/slice/userSlice';
 
 export {
   useGetUsersQuery,

@@ -2,10 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { Modal, ModalProps } from 'shared/ui/Modal/Modal';
 import { Button, Input } from 'shared/ui';
 import React, { useEffect, useState } from 'react';
-import { useAuthUserMutation } from 'entities/User';
+import { useAuthUserMutation, userActions } from 'entities/User';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useDispatch } from 'react-redux';
-import { userActions } from 'entities/User/model/slice/userSlice';
 
 interface AuthUserModalProps extends ModalProps {
   className?: string;
@@ -24,10 +23,11 @@ export const AuthUserModal = (props: AuthUserModalProps) => {
   const [update, {
     isLoading, data, error, isError,
   }] = useAuthUserMutation();
+
   useEffect(() => {
-    console.log(data);
     dispatch(userActions.setUser(data));
   }, [data]);
+
   return (
     <Modal {...otherProps}>
       <Input
