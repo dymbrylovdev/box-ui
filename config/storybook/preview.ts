@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react';
 import { RouterDecorator, StyleDecorator, ThemeDecorator } from '../../src/shared/config';
-import { Themes } from '../../src/features/theme';
+import { Themes } from '../../src/features/Theme';
 
 export const decorators = [
   RouterDecorator,

@@ -1,4 +1,4 @@
-import { Themes } from 'features/theme';
+import { Themes } from 'features/Theme';
 
 export type ThemeProps = {
   theme?: Themes,

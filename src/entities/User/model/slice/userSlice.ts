@@ -6,9 +6,12 @@ const initialState: UserSchema = {
 };
 
 export const userSlice = createSlice({
-  name: 'counter',
+  name: 'user',
   initialState,
   reducers: {
+    setUser: (state, action) => {
+      state.user = action.payload;
+    },
   },
 });
 

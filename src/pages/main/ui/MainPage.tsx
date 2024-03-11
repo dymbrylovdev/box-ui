@@ -13,23 +13,6 @@ interface IProps {
 const MainPage: FC<IProps> = ({ className }) => {
   const { t } = useTranslation();
   const { data, isLoading } = useGetUsersQuery();
-  const login = async () => {
-    try {
-      const authData = {
-        username: 'admin',
-        password: '123',
-      };
-      const response = await axios.post('http://localhost:8000/login', authData);
-
-      if (!response.data) {
-        throw new Error();
-      }
-      console.log(response.data);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-  console.log(data);
 
   if (isLoading) {
     return (
@@ -40,11 +23,7 @@ const MainPage: FC<IProps> = ({ className }) => {
   }
 
   return (
-    <div className={classNames('', {}, [className])}>
-      <Button onClick={login}>
-        {t('MAIN')}
-      </Button>
-    </div>
+    <div className={classNames('', {}, [className])} />
   );
 };
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config';
-import { Themes } from 'features/theme';
+import { Themes } from 'features/Theme';
 import { ErrorPage } from './ErrorPage';
 
 const meta: Meta<typeof ErrorPage> = {

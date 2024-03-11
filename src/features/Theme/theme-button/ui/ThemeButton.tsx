@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
-import { Themes } from 'features/theme/theme-provider/lib/constants';
-import { useTheme } from 'features/theme';
+import { Themes, useTheme } from 'features/Theme';
 import { Button } from 'shared/ui';
 import { ThemeDarkSVG, ThemeLightSVG } from 'shared/assets';
 import { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
