@@ -1,4 +1,6 @@
-import componentRender from 'shared/lib/tests/componentRender/componentRender';
+import componentRender from './tests/componentRender/componentRender';
+
+export { TestAsyncThunk } from './tests/TestAsyncThunk/TestAsyncThunk';
 
 export { DynamicModuleLoader, ReducersList } from './components/DynamicModuleLoader/DynamicModuleLoader';
 

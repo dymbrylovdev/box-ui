@@ -7,7 +7,7 @@ export {
   useGetUsersQuery,
   UserReducerReturnType,
   useAuthUserMutation,
-} from 'entities/User/servises/RTKQuery/splitEndpoints/userSplitApi';
+} from './servises/RTKQuery/splitEndpoints/userSplitApi';
 
 export {
   userApi,
@@ -17,7 +17,6 @@ export {
   userReducer,
   userActions,
 } from './model/slice/userSlice';
-
 export {
   UserSchema,
   IUser,

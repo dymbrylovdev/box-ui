@@ -1,6 +1,6 @@
-import { createAsyncThunk, AsyncThunk } from '@reduxjs/toolkit';
-import { IUser } from 'entities/User';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { IUser } from '../../model/types/userSchema';
 
 interface LoginByUsernameProps {
   userId: number
