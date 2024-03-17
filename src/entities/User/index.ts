@@ -1,14 +1,22 @@
 import type { UserSchema } from './model/types/userSchema';
 import { IUser } from './model/types/userSchema';
 
-export { userReducer, userActions } from './model/slice/userSlice';
+export { fetchUserById } from './servises/asyncThunks/fetchUserById';
 
 export {
   useGetUsersQuery,
-  userApi,
   UserReducerReturnType,
   useAuthUserMutation,
-} from './servises/userAPI';
+} from 'entities/User/servises/RTKQuery/splitEndpoints/userSplitApi';
+
+export {
+  userApi,
+} from './servises/RTKQuery/userAPI';
+
+export {
+  userReducer,
+  userActions,
+} from './model/slice/userSlice';
 
 export {
   UserSchema,

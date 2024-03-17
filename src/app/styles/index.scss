@@ -8,7 +8,7 @@ body {
   color: var(--primary-color);
 }
 
-.app {
+.app, app_modal{
   min-height: 100vh;
   background-color: var(--bg-color);
 }

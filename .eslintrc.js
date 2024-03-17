@@ -15,7 +15,11 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json', './babel.config.json']
   },
-  plugins: ['react', '@typescript-eslint', 'i18next'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next'
+  ],
   rules: {
     '@typescript-eslint/no-shadow': 'off',
     '@typescript-eslint/naming-convention': 'off',

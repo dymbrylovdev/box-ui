@@ -63,9 +63,13 @@ export const Modal = (props: ModalProps) => {
     [cls.isClosing]: isClosing,
   };
 
+  if (!isOpen) {
+    return null;
+  }
+
   return (
     <Portal>
-      <div className={classNames(cls.Modal, mods, [className])}>
+      <div className={classNames(cls.Modal, mods, [className, 'app_modal'])}>
         <div className={cls.overlay} onClick={closeHandler}>
           <div
             className={cls.content}
