@@ -2,7 +2,6 @@ import type { UserSchema } from './model/types/userSchema';
 import { IUser } from './model/types/userSchema';
 
 export { fetchUserById } from './servises/asyncThunks/fetchUserById';
-
 export {
   useGetUsersQuery,
   UserReducerReturnType,
