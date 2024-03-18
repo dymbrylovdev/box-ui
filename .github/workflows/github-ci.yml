@@ -7,16 +7,16 @@ on:
 
 jobs:
   pipeline:
-    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.x]
-
+        node-version: [18.x]
+        platform: [windows-latest]
+    runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v3
       - name: Staring Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
@@ -31,8 +31,8 @@ jobs:
         run: npm run lint:scss
         if: always()
       - name: test unit
-        run: npm run test:unit
         if: always()
+        run: npm run test:unit
       - name: storybook build
         run: npm run build-storybook
         if: always()

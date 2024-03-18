@@ -1,30 +1,43 @@
-import { FC, Suspense, useEffect } from 'react';
+import {
+  FC, memo, useEffect,
+} from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib';
-import axios from 'axios';
-import { Button } from 'shared/ui';
-import { useGetUsersQuery } from 'entities/User';
-import { LoaderPage } from 'pages/loader';
+import { classNames, DynamicModuleLoader, ReducersList } from 'shared/lib';
+import { useDispatch, useSelector } from 'react-redux';
+import { StateSchema } from 'app/providers/StoreProvider';
+import { fetchUserById, userReducer } from 'entities/User';
 
 interface IProps {
   className?: any;
 }
 
+const initialReducers: ReducersList = {
+  user: userReducer,
+};
+
 const MainPage: FC<IProps> = ({ className }) => {
   const { t } = useTranslation();
-  const { data, isLoading } = useGetUsersQuery();
+  const users = useSelector((state: StateSchema) => state?.user?.users);
+  const dispatch = useDispatch();
 
-  if (isLoading) {
-    return (
-      <div style={{ height: '100%' }}>
-        <LoaderPage />
-      </div>
-    );
-  }
+  useEffect(() => {
+    dispatch(fetchUserById({ userId: 1 }));
+  }, [dispatch]);
 
   return (
-    <div className={classNames('', {}, [className])} />
+    <DynamicModuleLoader
+      removeAfterUnmount
+      reducers={initialReducers}
+    >
+      <div className={classNames('', {}, [className])}>
+        {users?.map((user) => (
+          <div key={user.id}>
+            {user.username}
+          </div>
+        ))}
+      </div>
+    </DynamicModuleLoader>
   );
 };
 
-export default MainPage;
+export default memo(MainPage);

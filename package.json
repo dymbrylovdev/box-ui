@@ -15,7 +15,8 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "chromatic": "npx chromatic --project-token=chpt_c3967633ede083e "
+    "chromatic": "npx chromatic --project-token=chpt_c3967633ede083e ",
+    "git:cached": "git rm -r --cached . && git add --all ."
   },
   "keywords": [],
   "author": "",
@@ -84,8 +85,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.7",
-    "@types/react-redux": "^7.1.28",
+    "@reduxjs/toolkit": "^1.8.0",
     "axios": "^1.5.1",
     "i18next": "^22.4.9",
     "i18next-browser-languagedetector": "^7.0.1",
@@ -93,7 +93,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.1.5",
-    "react-redux": "^8.1.3",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^6.8.0",
     "whatwg-fetch": "^3.6.20"
   },

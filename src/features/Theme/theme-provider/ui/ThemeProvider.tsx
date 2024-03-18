@@ -10,10 +10,11 @@ export const defaultValue = localStorage.getItem(THEME_STORAGE_KEY) as Themes ||
 
 interface IProps {
   children: React.ReactNode;
+  initialTheme?: Themes;
 }
 
-export const ThemeProvider: React.FC<IProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Themes>(defaultValue);
+export const ThemeProvider: React.FC<IProps> = ({ children, initialTheme }) => {
+  const [theme, setTheme] = useState<Themes>(initialTheme || defaultValue);
 
   const initialProps = useMemo<ThemeProps>(() => ({
     theme,
