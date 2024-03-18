@@ -1,5 +1,9 @@
 import type { UserSchema } from './model/types/userSchema';
 import { IUser } from './model/types/userSchema';
+import {
+  userReducer,
+  userActions,
+} from './model/slice/userSlice';
 
 export { fetchUserById } from './servises/asyncThunks/fetchUserById';
 export {
@@ -13,10 +17,8 @@ export {
 } from './servises/RTKQuery/userAPI';
 
 export {
-  userReducer,
-  userActions,
-} from './model/slice/userSlice';
-export {
   UserSchema,
   IUser,
+  userReducer,
+  userActions,
 };
