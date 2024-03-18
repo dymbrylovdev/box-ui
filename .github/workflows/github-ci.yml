@@ -24,9 +24,6 @@ jobs:
       - name: build prod
         run: npm run build:prod
         if: always()
-      - name: git cached
-        run: npm run git:cached
-        if: always()
       - name: lint ts
         run: npm run lint:ts
         if: always()
