@@ -15,8 +15,8 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "chromatic": "npx chromatic --project-token=chpt_c3967633ede083e "
-    "git:cached": "git rm -r --cached . && git add --all .",
+    "chromatic": "npx chromatic --project-token=chpt_c3967633ede083e ",
+    "git:cached": "git rm -r --cached . && git add --all ."
   },
   "keywords": [],
   "author": "",
