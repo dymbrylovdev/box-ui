@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { ReducersMapObject } from 'redux';
 import { createReducerManager } from 'app/providers/StoreProvider/config/reducerManager';
-import { counterReducer } from '../../../../entities/Counter';
 import { fetchUserById, userApi, userReducer } from '../../../../entities/User';
 import { StateSchema } from './StateSchema';
 
@@ -12,7 +11,6 @@ export function createReduxStore(
   const rootReducer: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
     [userApi.reducerPath]: userApi.reducer,
-    counter: counterReducer,
   };
 
   const reducerManager = createReducerManager(rootReducer);
@@ -36,3 +34,5 @@ export function createReduxStore(
 
   return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];

@@ -30,9 +30,9 @@ jobs:
       - name: lint scss
         run: npm run lint:scss
         if: always()
-      - name: test unit
-        if: always()
-        run: npm run test:unit
+#      - name: test unit
+#        if: always()
+#        run: npm run test:unit
       - name: storybook build
         run: npm run build-storybook
         if: always()

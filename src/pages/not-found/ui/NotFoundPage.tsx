@@ -12,7 +12,7 @@ const NotFoundPage: FC<IProps> = ({ className }) => {
 
   return (
     <div className={classNames(cls.container, {}, [className])}>
-      {t('NOT_FOUND')}
+      {t('нет такой страницы')}
     </div>
   );
 };

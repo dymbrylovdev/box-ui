@@ -1,10 +1,8 @@
 import React, { FC, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib';
-import { Modal } from 'shared/ui/Modal/Modal';
 import { Button, Input } from 'shared/ui';
 import { ButtonTheme } from 'shared/ui/Button/Button';
-import { Counter } from 'entities/Counter';
 import { LoginUserModal } from 'features/AuthUser';
 import cls from './Navbar.module.scss';
 
@@ -22,8 +20,6 @@ export const Navbar: FC<IProps> = ({ className }) => {
 
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
-      <Counter />
-
       <Button
         theme={ButtonTheme.CLEAR_INVERTED}
         className={cls.links}

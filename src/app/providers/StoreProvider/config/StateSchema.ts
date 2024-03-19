@@ -1,18 +1,17 @@
-import { CounterSchema } from 'entities/Counter';
 import { userApi, UserReducerReturnType, UserSchema } from 'entities/User';
 import { ReducersMapObject } from 'redux';
 import {
   AnyAction, CombinedState, EnhancedStore, Reducer,
 } from '@reduxjs/toolkit';
 import { LoginSchema } from 'features/AuthUser';
+import { ProfileSchema } from 'entities/Profile';
 
 export interface StateSchema {
-  counter: CounterSchema;
-
   // Асинхронные
   [userApi.reducerPath]: UserReducerReturnType;
   user?: UserSchema;
   loginForm?: LoginSchema;
+  profile?: ProfileSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
