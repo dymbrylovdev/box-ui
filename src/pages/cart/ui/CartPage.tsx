@@ -11,7 +11,7 @@ const CartPage: FC<IProps> = ({ className }) => {
 
   return (
     <div className={classNames('', {}, [className])}>
-      {t('CARD')}
+      {t('Карзина')}
     </div>
   );
 };

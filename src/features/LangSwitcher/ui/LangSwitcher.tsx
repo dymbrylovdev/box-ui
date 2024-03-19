@@ -23,7 +23,7 @@ export const LangSwitcher: FC<IProps> = ({ className }) => {
       onClick={toggleTranslate}
       className={classNames('', {}, [className])}
     >
-      {t('LANG')}
+      {t('Язык')}
     </Button>
   );
 };

@@ -31,7 +31,7 @@ export const Sidebar: FC<IProps> = ({ className }) => {
         >
           <HomeSVG className={cls.icon} />
           <span className={cls.link}>
-            {t('MAIN')}
+            {t('Главная')}
           </span>
         </AppLink>
         <AppLink
@@ -41,7 +41,7 @@ export const Sidebar: FC<IProps> = ({ className }) => {
         >
           <ClarityListSVG className={cls.icon} />
           <span className={cls.link}>
-            {t('CARD')}
+            {t('Карзина')}
           </span>
         </AppLink>
       </div>
