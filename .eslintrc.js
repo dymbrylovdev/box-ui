@@ -48,8 +48,8 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'off',
     'max-len': ['error', {
       'code': 300
-    }]
-  },
+    }],
+    'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],  },
   globals: {
     __IS_DEV__: true
   }
