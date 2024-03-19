@@ -1,9 +1,9 @@
 export {
-    Profile,
-    ProfileSchema,
+  Profile,
+  ProfileSchema,
 } from './model/types/profile';
 
 export {
-    profileActions,
-    profileReducer,
+  profileActions,
+  profileReducer,
 } from './model/slice/profileSlice';
