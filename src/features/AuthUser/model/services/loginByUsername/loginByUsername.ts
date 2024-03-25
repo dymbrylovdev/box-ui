@@ -3,6 +3,7 @@ import axios from 'axios';
 import { IUser } from 'entities/User/model/types/userSchema';
 import { USER_LOCALSTORAGE_KEY } from 'shared/constants/localstorage';
 import { userActions } from 'entities/User';
+import { redirect } from 'react-router-dom';
 
 interface LoginByUsernameProps {
   username: string;

@@ -1,4 +1,5 @@
-export { RouterDecorator } from 'shared/config/decorators/RouterDecorator';
-export { StyleDecorator } from 'shared/config/decorators/StyleDecorator';
-export { StoreDecorator } from 'shared/config/decorators/StoreDecorator';
-export { ThemeDecorator } from 'shared/config/decorators/ThemeDecorator';
+export { RouterDecorator } from './decorators/RouterDecorator';
+export { StyleDecorator } from './decorators/StyleDecorator';
+export { StoreDecorator } from './decorators/StoreDecorator';
+export { ThemeDecorator } from './decorators/ThemeDecorator';
+export { $api } from './api/api';

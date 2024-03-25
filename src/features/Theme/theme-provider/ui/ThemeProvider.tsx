@@ -3,10 +3,11 @@ import { Themes } from '../lib/constants';
 import { ThemeProps } from '../types';
 
 export const THEME_STORAGE_KEY = 'theme';
-
-export const ThemeContext = createContext<ThemeProps>({});
-
 export const defaultValue = localStorage.getItem(THEME_STORAGE_KEY) as Themes || Themes.LIGHT;
+
+export const ThemeContext = createContext<ThemeProps>({
+  theme: defaultValue,
+});
 
 interface IProps {
   children: React.ReactNode;

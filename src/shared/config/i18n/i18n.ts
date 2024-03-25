@@ -6,6 +6,12 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import translationEN from '../../../../public/locales/en/translation.json';
 import translationRU from '../../../../public/locales/ru/translation.json';
 
+declare module 'i18next' {
+  interface CustomTypeOptions {
+    returnNull: false
+  }
+}
+
 const resources = {
   en: {
     translation: translationEN,
@@ -23,6 +29,7 @@ i18n
     resources,
     fallbackLng: ['ru', 'en'],
     debug: __IS_DEV__,
+    returnNull: false,
     interpolation: {
       escapeValue: false,
     },

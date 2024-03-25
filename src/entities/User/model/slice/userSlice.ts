@@ -24,7 +24,7 @@ export const userSlice = createSlice({
       }
     },
     logout: (state) => {
-      state.user = undefined;
+      state.user = null;
       localStorage.removeItem(USER_LOCALSTORAGE_KEY);
     },
   },

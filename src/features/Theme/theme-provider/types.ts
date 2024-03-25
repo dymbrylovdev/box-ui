@@ -1,6 +1,6 @@
 import { Themes } from 'features/Theme';
 
 export type ThemeProps = {
-  theme?: Themes,
+  theme: Themes,
   setTheme?: (theme: Themes) => void;
 };
