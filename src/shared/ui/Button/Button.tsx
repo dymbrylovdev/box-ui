@@ -32,18 +32,18 @@ export const Button: FC<ButtonProps> = (props) => {
   const {
     className,
     children,
-    theme,
+    theme = ButtonTheme.BACKGROUND_INVERTED,
     square,
     size = ButtonSize.M,
     disabled,
     ...otherProps
   } = props;
 
-  const mods: Record<string, boolean> = {
+  const mods: Partial<Record<string, boolean | undefined>> = {
     [cls.square]: square,
     [cls[size]]: true,
-    [cls[theme]]: true,
     [cls.disabled]: disabled,
+    [cls[theme]]: true,
   };
 
   return (

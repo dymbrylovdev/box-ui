@@ -1,7 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
+import {
+  CombinedState, configureStore, Reducer,
+} from '@reduxjs/toolkit';
 import { ReducersMapObject } from 'redux';
 import { createReducerManager } from 'app/providers/StoreProvider/config/reducerManager';
-import { fetchUserById, userApi, userReducer } from '../../../../entities/User';
+import { $api } from 'shared/config';
+import { userApi } from '../../../../entities/User';
 import { StateSchema } from './StateSchema';
 
 export function createReduxStore(
@@ -15,15 +18,16 @@ export function createReduxStore(
 
   const reducerManager = createReducerManager(rootReducer);
 
-  const store = configureStore<StateSchema>({
-    reducer: reducerManager.reduce,
+  const store = configureStore({
+    reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
     devTools: __IS_DEV__,
     preloadedState: initialState,
-    // @ts-ignore
     middleware: (getDefaultMiddleware) => getDefaultMiddleware(
       {
         thunk: {
-          extraArgument: fetchUserById,
+          extraArgument: {
+            api: $api,
+          },
         },
       },
     ).prepend(userApi.middleware),

@@ -10,7 +10,7 @@ import { StoreProvider } from 'app/providers/StoreProvider';
 
 const App = lazy(async () => import('./app'));
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <StoreProvider>

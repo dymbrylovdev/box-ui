@@ -3,7 +3,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true
+    jest: true,
   },
   extends: ['airbnb', 'airbnb-typescript', 'airbnb-typescript/base', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
   parser: '@typescript-eslint/parser',
@@ -51,6 +51,7 @@ module.exports = {
     }],
     'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],  },
   globals: {
-    __IS_DEV__: true
+    __IS_DEV__: true,
+    __API__: true
   }
 };
