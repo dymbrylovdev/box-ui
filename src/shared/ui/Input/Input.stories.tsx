@@ -1,12 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Input } from './Input';
 
 const meta: Meta<typeof Input> = {
   title: 'shared/Input',
   component: Input,
   tags: ['autodocs'],
-  argTypes: {
-  },
+  argTypes: {},
 };
 export default meta;
 type Story = StoryObj<typeof Input>;

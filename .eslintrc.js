@@ -18,7 +18,8 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
-    'i18next'
+    'i18next',
+    'storybook'
   ],
   rules: {
     '@typescript-eslint/no-shadow': 'off',

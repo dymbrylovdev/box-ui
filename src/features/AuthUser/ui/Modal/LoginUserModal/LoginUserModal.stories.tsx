@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ThemeDecorator } from 'shared/config/decorators/ThemeDecorator';
 import { Themes } from 'features/Theme';
 import { StoreDecorator } from 'shared/config';
@@ -8,8 +8,7 @@ const meta: Meta<typeof LoginUserModal> = {
   title: 'features/LoginUserModal',
   component: LoginUserModal,
   tags: ['autodocs'],
-  argTypes: {
-  },
+  argTypes: {},
 };
 export default meta;
 type Story = StoryObj<typeof LoginUserModal>;

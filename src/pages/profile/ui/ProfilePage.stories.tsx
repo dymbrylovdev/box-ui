@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { StoreDecorator, ThemeDecorator } from 'shared/config';
 import { Themes } from 'features/Theme';
 import ProfilePage from './ProfilePage';
@@ -7,8 +7,7 @@ const meta: Meta<typeof ProfilePage> = {
   title: 'pages/ProfilePage',
   component: ProfilePage,
   tags: ['autodocs'],
-  argTypes: {
-  },
+  argTypes: {},
 };
 export default meta;
 type Story = StoryObj<typeof ProfilePage>;

@@ -1,4 +1,5 @@
-export { default as ThemeDarkSVG } from './icons/theme-dark.svg';
-export { default as ThemeLightSVG } from './icons/theme-light.svg';
-export { default as HomeSVG } from './icons/home.svg';
-export { default as ClarityListSVG } from './icons/clarity_list.svg';
+// Импортируем SVG-файлы как React-компоненты
+export { ReactComponent as ThemeDarkSVG } from './icons/theme-dark.svg';
+export { ReactComponent as ThemeLightSVG } from './icons/theme-light.svg';
+export { ReactComponent as HomeSVG } from './icons/home.svg';
+export { ReactComponent as ClarityListSVG } from './icons/clarity_list.svg';

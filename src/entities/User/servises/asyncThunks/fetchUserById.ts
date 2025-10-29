@@ -1,6 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-import { ThunkConfig } from 'app/providers/StoreProvider/config/StateSchema';
+import { ThunkConfig } from 'app/providers/StoreProvider';
 import { IUser } from '../../model/types/userSchema';
 
 interface LoginByUsernameProps {
@@ -10,8 +9,8 @@ interface LoginByUsernameProps {
 export const fetchUserById = createAsyncThunk<IUser[], LoginByUsernameProps, ThunkConfig<string>>(
   'user/fetchByIdStatus',
   async (user, { extra, rejectWithValue }) => {
-    const response = await extra.api.get<IUser[]>('http://localhost:8000/users');
-    console.log(response.data);
+    const response = await extra.api.get<IUser[]>('/users');
+    console.log('response.data', response.data);
     return response.data;
   },
 );

@@ -1,4 +1,4 @@
-@import "../variables/global";
+@use "../variables/global" as *;
 
 .app_dark_theme {
   --bg-color: #{$dark};

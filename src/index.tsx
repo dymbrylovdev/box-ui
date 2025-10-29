@@ -13,15 +13,15 @@ const App = lazy(async () => import('./app'));
 const root = createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
-  <StoreProvider>
-    <ErrorBoundary>
-      <ThemeProvider>
-        <I18nextProvider i18n={i18n}>
-          <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
+      <ErrorBoundary>
+        <ThemeProvider>
+          <I18nextProvider i18n={i18n}>
             <App />
-          </BrowserRouter>
-        </I18nextProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-  </StoreProvider>,
+          </I18nextProvider>
+        </ThemeProvider>
+      </ErrorBoundary>
+    </StoreProvider>
+  </BrowserRouter>,
 );

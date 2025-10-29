@@ -1,12 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Text, TextTheme } from './Text';
 
 const meta: Meta<typeof Text> = {
   title: 'shared/Text',
   component: Text,
   tags: ['autodocs'],
-  argTypes: {
-  },
+  argTypes: {},
 };
 export default meta;
 type Story = StoryObj<typeof Text>;

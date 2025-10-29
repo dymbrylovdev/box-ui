@@ -3,7 +3,16 @@ import { Themes } from '../lib/constants';
 import { ThemeProps } from '../types';
 
 export const THEME_STORAGE_KEY = 'theme';
-export const defaultValue = localStorage.getItem(THEME_STORAGE_KEY) as Themes || Themes.LIGHT;
+
+export const getThemeFromStorage = (): Themes => {
+  const theme = localStorage.getItem(THEME_STORAGE_KEY);
+  if (theme === Themes.DARK || theme === Themes.LIGHT) {
+    return theme as Themes;
+  }
+  return Themes.LIGHT;
+};
+
+export const defaultValue = getThemeFromStorage();
 
 export const ThemeContext = createContext<ThemeProps>({
   theme: defaultValue,
@@ -19,6 +28,7 @@ export const ThemeProvider: React.FC<IProps> = ({ children, initialTheme }) => {
 
   const initialProps = useMemo<ThemeProps>(() => ({
     theme,
+    // @ts-ignore
     setTheme,
   }), [theme]);
 

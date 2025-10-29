@@ -1,4 +1,4 @@
-@import "../variables/global";
+@use "../variables/global" as *;
 
 :root {
   --bg-color: #{$lite};

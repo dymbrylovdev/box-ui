@@ -3,8 +3,8 @@ import { userApi } from '../userAPI';
 
 const userSplitApi = userApi.injectEndpoints({
   endpoints: (builder) => ({
-    getUsers: builder.query<IUser, number>({
-      query: (id) => 'users/',
+    getUsers: builder.query<IUser, void>({
+      query: () => '/users',
     }),
     authUser: builder.mutation<IUser, { username: string, password: string } >({
       query: (body) => ({

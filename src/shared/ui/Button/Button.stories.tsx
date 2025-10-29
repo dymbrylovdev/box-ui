@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Themes } from 'features/Theme';
 import { ThemeDecorator } from 'shared/config';
 import { Button, ButtonSize, ButtonTheme } from './Button';
@@ -7,8 +7,7 @@ const meta: Meta<typeof Button> = {
   title: 'shared/Button',
   component: Button,
   tags: ['autodocs'],
-  argTypes: {
-  },
+  argTypes: {},
 };
 export default meta;
 type Story = StoryObj<typeof Button>;
@@ -53,9 +52,7 @@ export const Background: Story = {
     children: 'Click',
     theme: ButtonTheme.BACKGROUND,
   },
-  decorators: [
-    ThemeDecorator(Themes.DARK),
-  ],
+  decorators: [ThemeDecorator(Themes.DARK)],
 };
 
 export const BackgroundInverted: Story = {

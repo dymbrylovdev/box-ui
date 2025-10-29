@@ -1,5 +1,4 @@
-import type { UserSchema } from './model/types/userSchema';
-import { IUser } from './model/types/userSchema';
+import type { UserSchema, IUser } from './model/types/userSchema';
 import {
   userReducer,
   userActions,
@@ -8,17 +7,20 @@ import {
 export { fetchUserById } from './servises/asyncThunks/fetchUserById';
 export {
   useGetUsersQuery,
-  UserReducerReturnType,
   useAuthUserMutation,
 } from './servises/RTKQuery/splitEndpoints/userSplitApi';
+export type { UserReducerReturnType } from './servises/RTKQuery/splitEndpoints/userSplitApi';
 
 export {
   userApi,
 } from './servises/RTKQuery/userAPI';
 
-export {
+export type {
   UserSchema,
   IUser,
+};
+
+export {
   userReducer,
   userActions,
 };

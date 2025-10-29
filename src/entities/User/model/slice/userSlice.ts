@@ -5,8 +5,10 @@ import { fetchUserById } from '../../servises/asyncThunks/fetchUserById';
 
 const initialState: UserSchema = {
   user: null,
-  users: [],
+  userList: [],
   loading: 'idle',
+  readonly: false,
+  error: undefined,
 };
 
 export const userSlice = createSlice({
@@ -32,7 +34,7 @@ export const userSlice = createSlice({
     // Add reducers for additional action types here, and handle loading state as needed
     builder.addCase(fetchUserById.fulfilled, (state, action) => {
       // Add user to the state array
-      state.users = action.payload;
+      state.userList = action.payload;
     });
   },
 });

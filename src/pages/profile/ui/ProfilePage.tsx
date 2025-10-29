@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import { profileReducer } from 'entities/Profile';
+import { userReducer } from 'entities/User';
 import { classNames, DynamicModuleLoader, ReducersList } from 'shared/lib';
 
 const reducers: ReducersList = {
-  profile: profileReducer,
+  user: userReducer,
 };
 interface ProfilePageProps {
   className?: string;
