@@ -1,13 +1,17 @@
-@import "./reset";
-@import "variables/global";
-@import "./themes/dark";
-@import "./themes/light";
+@use "./reset";
+@use "variables/global";
+@use "./themes/dark";
+@use "./themes/light";
+
+.app,
+.app_modal {
+  font: var(--font-m);
+  color: var(--primary-color);
+}
 
 .app {
-  font: var(--font-l);
-  height: 100vh;
-  background-color: var(--bg-color);
-  color: var(--primary-color);
+  background: var(--bg-color);
+  min-height: 100vh;
 }
 
 .container-content {

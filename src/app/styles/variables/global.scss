@@ -1,5 +1,5 @@
 $dark: #090949;
-$lite: #a8a8f5;
+$lite: #ccccfa;
 $primary: #04ff04;
 $secondary: #049604;
 $primary-dark: #0449e0;
@@ -18,9 +18,16 @@ $secondary-dark: #0232c2;
   --font-line-xl: 40px;
   --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
+  // z - Индексы
+  --modal-z-index: 10;
 
   // Размеры
   --navbar-higth: 60px;
   --sidebar-width: 300px;
   --sidebar-width-collased: 100px;
+
+  // Цвета
+  --overlay-color: rgba(0 0 0 / 60%);
+  --red-light: #ff00;
+  --red-dark: #ce0505;
 }

@@ -1,7 +1,12 @@
-import ComponentRender from './halpers/componentRender/componentRender';
+import componentRender from './tests/componentRender/componentRender';
 
-export { ClassNames } from 'shared/lib/halpers/className/classNames';
+export { TestAsyncThunk } from './tests/TestAsyncThunk/TestAsyncThunk';
+
+export { DynamicModuleLoader } from './components/DynamicModuleLoader/DynamicModuleLoader';
+export type { ReducersList } from './components/DynamicModuleLoader/DynamicModuleLoader';
+
+export { classNames } from './halpers/className/classNames';
 
 export {
-  ComponentRender,
+  componentRender,
 };

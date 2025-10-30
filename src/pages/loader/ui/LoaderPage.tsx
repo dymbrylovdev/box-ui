@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Loader } from 'shared/ui';
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 import cls from './LoaderPage.module.scss';
 
 interface IProps {
@@ -8,7 +8,7 @@ interface IProps {
 }
 
 const LoaderPage: FC<IProps> = ({ className }) => (
-  <div className={ClassNames(cls.container, {}, [className])}>
+  <div className={classNames(cls.container, {}, [className])}>
     <Loader />
   </div>
 );

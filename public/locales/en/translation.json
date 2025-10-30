@@ -1,8 +1,17 @@
 {
-  "TEST": "test",
-  "LANG": "Lang",
-  "TOGGLE": "Toggle",
-  "MAIN": "main",
-  "CARD": "card",
-  "NOT_FOUND": "not found page"
+  "Язык": "Lang",
+  "Переключить": "Toggle",
+  "Главная": "main",
+  "Карзина": "card",
+  "нет такой страницы": "not found page",
+  "Произошла непредвиденная ошибка": "not found page",
+  "Обновить страницу": "not found page",
+  "Войти": "not found page",
+  "Логин": "not found page",
+  "Прароль": "not found page",
+  "Введите username": "not found page",
+  "Введите пароль": "not found page",
+  "Форма авторизации": "not found page",
+  "Вы ввели неверный логин или пароль": "not found page",
+  "Профиль": "Профиль"
 }

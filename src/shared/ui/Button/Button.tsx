@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, type FC } from 'react';
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 import cls from './Button.module.scss';
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -32,24 +32,24 @@ export const Button: FC<ButtonProps> = (props) => {
   const {
     className,
     children,
-    theme,
+    theme = ButtonTheme.BACKGROUND_INVERTED,
     square,
     size = ButtonSize.M,
     disabled,
     ...otherProps
   } = props;
 
-  const mods: Record<string, boolean> = {
+  const mods: Partial<Record<string, boolean | undefined>> = {
     [cls.square]: square,
     [cls[size]]: true,
-    [cls[theme]]: true,
     [cls.disabled]: disabled,
+    [cls[theme]]: true,
   };
 
   return (
     <button
       type="button"
-      className={ClassNames(cls.Button, mods, [className])}
+      className={classNames(cls.Button, mods, [className])}
       disabled={disabled}
       {...otherProps}
     >

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 import cls from './NotFoundPage.module.scss';
 
 interface IProps {
@@ -11,8 +11,8 @@ const NotFoundPage: FC<IProps> = ({ className }) => {
   const { t } = useTranslation();
 
   return (
-    <div className={ClassNames(cls.container, {}, [className])}>
-      {t('NOT_FOUND')}
+    <div className={classNames(cls.container, {}, [className])}>
+      {t('нет такой страницы')}
     </div>
   );
 };

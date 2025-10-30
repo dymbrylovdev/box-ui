@@ -3,7 +3,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true
+    jest: true,
   },
   extends: ['airbnb', 'airbnb-typescript', 'airbnb-typescript/base', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
   parser: '@typescript-eslint/parser',
@@ -15,7 +15,12 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json', './babel.config.json']
   },
-  plugins: ['react', '@typescript-eslint', 'i18next'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'storybook'
+  ],
   rules: {
     '@typescript-eslint/no-shadow': 'off',
     '@typescript-eslint/naming-convention': 'off',
@@ -35,14 +40,19 @@ module.exports = {
     'react/jsx-props-no-spreading': 'warn',
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
+    'no-param-reassign': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
+    'consistent-return': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
     'max-len': ['error', {
-      'code': 120
-    }]
-  },
+      'code': 300
+    }],
+    'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],  },
   globals: {
-    __IS_DEV__: true
+    __IS_DEV__: true,
+    __API__: true
   }
 };

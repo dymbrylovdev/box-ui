@@ -1,7 +1,7 @@
-import { ClassNames } from 'shared/lib';
+import { classNames } from 'shared/lib';
 
 describe('className', () => {
   test('test', () => {
-    expect(ClassNames('someClass')).toBe('someClass');
+    expect(classNames('someClass')).toBe('someClass');
   });
 });
