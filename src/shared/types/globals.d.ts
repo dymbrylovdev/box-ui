@@ -8,9 +8,9 @@ declare module '*.jpeg';
 declare module '*.svg' {
   import React from 'react';
 
-  export const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
+  export const SVG: React.FC<React.SVGProps<SVGSVGElement>>;
 
-  export const ReactComponent: React.VFC<React.SVGProps<SVGSVGElement>>;
+  export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
 declare module '*.json' {
