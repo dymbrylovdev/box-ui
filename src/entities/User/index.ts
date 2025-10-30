@@ -1,8 +1,4 @@
-import type { UserSchema, IUser } from './model/types/userSchema';
-import {
-  userReducer,
-  userActions,
-} from './model/slice/userSlice';
+import { userActions, userReducer } from './model/slice/userSlice';
 
 export { fetchUserById } from './servises/asyncThunks/fetchUserById';
 export {
@@ -18,7 +14,7 @@ export {
 export type {
   UserSchema,
   IUser,
-};
+} from './model/types/userSchema';
 
 export {
   userReducer,

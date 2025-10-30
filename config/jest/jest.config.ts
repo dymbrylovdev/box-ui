@@ -39,7 +39,8 @@ export default {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg$': path.resolve(__dirname, 'svgMock.tsx'),
     '^src/shared/types/globals\\.d\\.ts$': path.resolve(__dirname, '../mocks/globalsMock.ts'),
-    '^src/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^(app|shared|entities|features|widgets|pages)/(.*)$': '<rootDir>/src/$1/$2',
   },
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
