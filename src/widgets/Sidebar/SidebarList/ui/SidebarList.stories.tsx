@@ -4,10 +4,11 @@ import { Themes } from 'features/Theme';
 import { SidebarList } from './SidebarList';
 
 const meta: Meta<typeof SidebarList> = {
-  title: 'Widgets/Sidebar',
+  title: 'Widgets/SidebarList',
   component: SidebarList,
   tags: ['autodocs'],
-  argTypes: {},
+  argTypes: {
+  },
 };
 export default meta;
 type Story = StoryObj<typeof SidebarList>;
